@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #eeeeee;
+    color: #ffffff;
+    font-family: "Roboto Condensed", Arial, sans-serif;
+}
+
+h1 {
+    font-family: "Space Mono", monospace;
+}
+
+h2 {
+    font-family: "IBM Plex Mono", monospace;
+}
+
+h3 {
+    font-family: "Roboto Mono", monospace;
+}
+
+h4,
+.site-nav a,
+.hero-placeholder button,
+.site-footer {
+    font-family: "Roboto", Arial, sans-serif;
+}
+
+.page-grid,
+.site-main {
+    display: grid;
+    grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
+}
+
+.site-header {
+    grid-column: 1 / -1;
+    min-height: 90px;
+    background: rgba(45, 45, 45, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-nav {
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.site-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 10px;
+}
+
+.site-nav a:first-child {
+    background: rgba(255, 255, 255, 0.85);
+    color: #333333;
+    border-radius: 4px;
+}
+
+.site-main {
+    grid-column: 1 / -1;
+}
+
+.hero-section {
+    grid-column: 1 / -1;
+    min-height: 380px;
+    background: rgba(190, 210, 235, 0.65);
+}
+
+.hero-placeholder {
+    min-height: 380px;
+    border: 2px solid rgba(40, 40, 40, 0.35);
+    background:
+        linear-gradient(to bottom right, transparent 49.7%, rgba(40, 40, 40, 0.45) 50%, transparent 50.3%),
+        linear-gradient(to top right, transparent 49.7%, rgba(40, 40, 40, 0.45) 50%, transparent 50.3%),
+        rgba(225, 225, 225, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-placeholder button {
+    min-width: 230px;
+    padding: 18px 35px;
+    border: 6px solid rgba(120, 120, 120, 0.35);
+    background: rgba(245, 245, 245, 0.75);
+    font-size: 18px;
+}
+
+.overview-section {
+    grid-column: 2 / 8;
+    min-height: 220px;
+    background: rgba(78, 120, 185, 0.45);
+    padding: 45px 20px 25px;
+    text-align: center;
+}
+
+.overview-section h1 {
+    margin: 0 0 18px;
+    font-size: 32px;
+}
+
+.overview-section p {
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.cards-section {
+    grid-column: 2 / 8;
+    min-height: 430px;
+    background: rgba(70, 160, 130, 0.45);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    padding: 20px;
+}
+
+.project-card {
+    min-height: 330px;
+    background: rgba(255, 180, 80, 0.45);
+    padding: 12px;
+}
+
+.project-card h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.project-image {
+    min-height: 210px;
+    border: 2px solid rgba(40, 40, 40, 0.35);
+    background:
+        linear-gradient(to bottom right, transparent 49.5%, rgba(40, 40, 40, 0.45) 50%, transparent 50.5%),
+        linear-gradient(to top right, transparent 49.5%, rgba(40, 40, 40, 0.45) 50%, transparent 50.5%),
+        rgba(230, 230, 230, 0.85);
+}
+
+.project-card p {
+    margin: 12px 0 0;
+    line-height: 1.4;
+}
+
+.site-footer {
+    grid-column: 1 / -1;
+    min-height: 55px;
+    background: rgba(160, 160, 160, 0.75);
+    color: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+@media (max-width: 750px) {
+    .site-nav {
+        gap: 12px;
+    }
+
+    .cards-section {
+        grid-template-columns: 1fr;
+    }
+}
