@@ -1,0 +1,316 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #4A4A4A;
+    color: #F1F1F1;
+    font-family: "Roboto Condensed", Arial, sans-serif;
+}
+
+h1 {
+    font-family: "Space Mono", monospace;
+}
+
+h2 {
+    font-family: "IBM Plex Mono", monospace;
+}
+
+h3 {
+    font-family: "Roboto Mono", monospace;
+}
+
+h4 {
+    font-family: "Roboto", Arial, sans-serif;
+}
+
+.site-nav a,
+.hero-content,
+.hero-content button,
+.site-footer {
+    font-family: "Roboto Mono", monospace;
+}
+
+.page-grid,
+.site-main {
+    display: grid;
+    grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
+}
+
+.page-grid {
+    min-height: 100vh;
+}
+
+.site-header {
+    grid-column: 1 / -1;
+    position: sticky;
+    top: 0;
+    min-height: 90px;
+    background: #4A4A4A;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+}
+
+.site-logo {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.site-logo img {
+    width: 64px;
+    height: 64px;
+}
+
+.site-nav {
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1 1 auto;
+}
+
+.site-nav a {
+    color: #F1F1F1;
+    text-decoration: none;
+    padding: 8px 10px;
+    font-size: 16px;
+}
+
+.site-nav a:first-child {
+    background: #F1F1F1;
+    color: #4A4A4A;
+    border-radius: 5px;
+}
+
+.site-main {
+    grid-column: 1 / -1;
+}
+
+.hero-section {
+    grid-column: 1 / -1;
+    min-height: 380px;
+    background:
+        linear-gradient(rgba(84, 108, 24, 0.68), rgba(84, 108, 24, 0.68)),
+        url("images/heroimg.jpg");
+    background-size: cover;
+    background-position: center; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    color: #4A4A4A;
+    text-align: center;
+}
+
+.hero-content h1 {
+    margin: 0 0 28px;
+    color: #F1F1F1;
+    font-size: 40px;
+}
+
+.hero-content button {
+    min-width: 245px;
+    padding: 16px 24px;
+    border: 0;
+    border-radius: 4px;
+    background: #D9D9D9;
+    color: #4A4A4A;
+    font-size: 16px;
+}
+
+.overview-section {
+    grid-column: 2 / 8;
+    min-height: 220px;
+    background: #4A4A4A;
+    padding: 45px 20px 25px;
+    text-align: center;
+}
+
+.overview-section h1 {
+    margin: 0 0 18px;
+    font-size: 32px;
+}
+
+.overview-section p {
+    max-width: 620px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.projects-section {
+    grid-column: 2 / 8;
+    min-height: 430px;
+    background: #4A4A4A;
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr) 34px;
+    gap: 18px;
+    padding: 20px 0;
+}
+
+.cards-section {
+    grid-column: 2;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 32px;
+    overflow-x: auto;
+}
+
+.project-card {
+    min-height: 330px;
+    color: #F1F1F1;
+    text-decoration: none;
+}
+
+.project-card:hover {
+    box-shadow: 0 14px 24px rgba(0, 0, 0, 0.28);
+}
+
+.project-card h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.project-image-box {
+    width: 100%;
+    min-height: 210px;
+    aspect-ratio: 4 / 3;
+    background: #F1F1F1;
+    border: 3px solid #889b2e; /*I cannot get the transparency to work right AT ALL, the color is way off my figma design so I'm using this color which I just color picked from the figma picture lol*/
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.empty-box {
+    background: #F1F1F1;
+}
+
+.project-card p {
+    margin: 12px 0 0;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    margin-top: 100px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.left-arrow {
+    grid-column: 1;
+    justify-self: end;
+    border-top: 31px solid transparent;
+    border-bottom: 31px solid transparent;
+    border-right: 22px solid #D9D9D9;
+}
+
+.right-arrow {
+    grid-column: 3;
+    justify-self: start;
+    border-top: 31px solid transparent;
+    border-bottom: 31px solid transparent;
+    border-left: 22px solid #D9D9D9;
+}
+
+.arrow:hover {
+    opacity: 0.85;
+}
+
+.site-footer {
+    grid-column: 1 / -1;
+    min-height: 55px;
+    background: #4A4A4A;
+    color: #F1F1F1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+@media (max-width: 750px) {
+    .site-header {
+        gap: 20px;
+    }
+
+    .site-nav {
+        gap: 12px;
+        justify-content: flex-end;
+    }
+
+    .overview-section,
+    .projects-section {
+        grid-column: 1 / -1;
+    }
+
+    .projects-section {
+        grid-template-columns: 34px minmax(0, 1fr) 34px;
+        gap: 12px;
+        padding: 20px 12px;
+    }
+
+    .cards-section {
+        grid-auto-columns: 100%;
+        gap: 18px;
+    }
+}
+
+@media (max-width: 540px) {
+    .site-header {
+        padding: 8px 12px;
+        gap: 14px;
+    }
+
+    .site-logo img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .site-nav {
+        gap: 12px;
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .overview-section {
+        padding: 34px 20px 22px;
+    }
+
+    .overview-section h1 {
+        font-size: 26px;
+    }
+
+    .arrow {
+        margin-top: 88px;
+    }
+}
