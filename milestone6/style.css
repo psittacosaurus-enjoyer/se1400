@@ -371,24 +371,44 @@ h4 {
 
     .projects-section {
         display: block;
-        padding: 22px 18px 34px;
+        min-height: 0;
+        padding: 28px 18px 56px;
     }
 
     .cards-section {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        gap: 24px;
+        gap: 32px;
         overflow-x: visible;
     }
 
     .project-card {
+        display: block;
         width: 100%;
         min-height: 0;
+        padding-bottom: 32px;
+        border-bottom: 1px solid rgba(241, 241, 241, 0.22);
+    }
+
+    .project-card:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+
+    .project-card h2 {
+        margin-bottom: 12px;
+        font-size: 20px;
+    }
+
+    .project-card p {
+        margin-top: 14px;
+        line-height: 1.5;
     }
 
     .project-image-box {
         min-height: 0;
+        border-width: 2px;
     }
 
     .arrow {
@@ -396,6 +416,9 @@ h4 {
     }
 
     .site-footer {
-        padding: 14px 18px;
+        min-height: auto;
+        padding: 22px 18px;
+        border-top: 1px solid rgba(241, 241, 241, 0.22);
+        line-height: 1.4;
     }
 }
