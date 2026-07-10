@@ -1,0 +1,60 @@
+
+.griddy {
+    display: grid;
+    grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
+}
+
+.griddy > * {
+    border: 1px solid black;
+}
+
+.my_header {
+    grid-column: 1/-1;
+    min-height: 100px;
+    background: rgba(0, 100, 255 ,0.25);
+}
+.my_hero {
+    grid-column: 1/-1;
+    min-height: 450px;
+    background: rgba(255, 0, 0 ,0.25);
+}
+
+.my_searchbox {
+    grid-column: 2/8;
+    min-height: 100px;
+    background: rgba(255, 0, 0 ,0.25);
+}
+
+.my_new_listings {
+    grid-column: 2/8;
+    min-height: 250px;
+    background: rgba(0, 200, 100 ,0.25);
+}
+
+.my_banner {
+    grid-column: 1/-1;
+    min-height: 100px;
+    background: rgba(255, 0, 0 ,0.25);
+}
+
+.my_browse {
+    grid-column: 2/8;
+    min-height: 200px;
+    background: rgba(0, 200, 100 ,0.25);
+}
+
+.my_financing {
+    grid-column: 2/8;
+    min-height: 200px;
+    background: rgba(0, 200, 100 ,0.25);
+}
+
+.my_footer {
+    grid-column: 1/-1;
+    min-height: 250px;
+    background: rgba(255, 255, 0 ,0.25);
+}
+
+body {
+    margin:0;
+}
