@@ -1,0 +1,435 @@
+
+:root {
+    --my-grey: #474747;
+    --my-orange: #C85028;
+    --my-light-grey: #CCCCCC;
+    --my-banner-grey: #f3f0ef
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin:0;
+    font-family: 'Inter', sans-serif;
+    color: var(--my-grey);
+}
+
+.griddy {
+    display: grid;
+    grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
+}
+
+/*.griddy > * {
+    border: 1px solid black;
+}*/
+
+.my_header {
+    font-size: 20px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto 1fr;
+    grid-column: 1 / -1;
+    min-height: 90px;
+
+    /*background: rgba(0, 100, 255 ,0.25);*/
+}
+
+/*.my_header h1 {
+
+    font-size: 32px;
+    display: flex;
+}*/
+
+.my_header nav {
+    font-weight: 700;
+    display: flex;
+    justify-self: center;
+    gap: 40px;
+}
+
+.my_text_logo {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    justify-self: start;
+}
+
+.my_text_logo h1 {
+    margin: 0;
+    line-height: 1;
+}
+
+.logo_DESERT {
+    display: block;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.logo_AUTOMOTIVE {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2.9px;
+}
+
+.my_sign_in {
+    justify-self: end;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.my_hero {
+    grid-column: 1/-1;
+    min-height: 450px;
+    background-image: url(imagesGPT/heroimg.png);
+    background-size: cover;
+    background-position: center;
+    /*background: rgba(255, 0, 0 ,0.25);*/ 
+}
+
+.my_hero_text span {
+    display: block;
+    margin-left: 85px;
+}
+
+.hero_TOP {
+    margin-top: 20px;
+    font-size: 72px;
+    font-weight: 700;
+}
+
+.hero_BOTTOM {
+    font-size: 72px;
+    color: var(--my-orange);
+    margin-top: -10px;
+    font-weight: 700;
+}
+
+.hero_small_TOP, .hero_small_BOTTOM {
+    color: #FFFFFF;
+    font-size: 16px;
+
+}
+
+.my_searchbox {
+    grid-column: 2/8;
+    background: #FFFFFF;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0 ,0.15);
+    margin-top: -135px;
+    /*background: rgba(255, 0, 0 ,0.25);*/
+}
+
+.search_field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+}
+
+.search_field label {
+    font-size: 13px;
+    font-weight: 700px;
+}
+.search_field select, .search_field input {
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid var(--my-light-grey);
+    border-radius: 5px;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+.search_button {
+    height: 40px;
+    padding: 0 25px;
+    border: none;
+    border-radius: 5px;
+    background: var(--my-orange);
+    color: #FFFFFF;
+    font-weight: 700;
+    font-family: 'Inter';
+}
+
+.search_TOP {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.search_BOTTOM {
+    display: flex;
+    gap:20px;
+    margin-top: 20px;
+    
+}
+
+.search_BOTTOM button {
+    flex: 1;
+    height: 30px;
+    border: 1px solid var(--my-light-grey);
+    border-radius: 25px;
+    font-family: 'Inter';
+}
+
+.search_BOTTOM button {
+    gap:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search_BOTTOM button img {
+    object-fit: contain;
+    width:35px;
+    height: 35px;
+    
+}
+
+.search_BOTTOM .price_BUTTON {
+    width: 25px;
+    height: 25px;
+}
+
+.search_BOTTOM .car_BUTTONS {
+    width: 50px;
+    height: 50px;
+}
+
+.search_form {
+    width:100%
+}
+
+
+.my_new_listings {
+    grid-column: 2/8;
+    min-height: 250px;
+    padding: 50px 0;
+    /*background: rgba(0, 200, 100 ,0.25);*/
+}
+
+.my_listing_heading {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.my_listing_heading p {
+    margin-left: 10px;
+}
+
+.my_listing_heading a {
+    color:var(--my-orange);
+    margin-left: auto;
+}
+
+.my_listing_cards {
+    gap: 20px;
+    display:flex;
+}
+
+.listing_SUV, .listing_TRUCK, .listing_SPORTS, .listing_SEDAN {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--my-light-grey);
+}
+
+.listing_SUV h1, .listing_TRUCK h1, .listing_SPORTS h1, .listing_SEDAN h1 {
+    font-size: 20px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.my_listing_cards img {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: 150px;
+    display: block;
+    object-fit: cover;
+}
+
+.my_banner {
+    grid-column: 1/-1;
+    background: var(--my-banner-grey);
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    justify-content: center;
+    /*background: rgba(255, 0, 0 ,0.25);*/
+}
+
+.my_banner h1 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.my_banner p {
+    font-size: 18px;
+}
+
+.banner_ICON {
+    display: flex;
+    gap:15px;
+    padding: 0 35px;
+    border-right: 1px solid var(--my-light-grey);
+    align-items: center;
+}
+
+.banner_ICON img {
+    width: 105px;
+    height: 105px;
+    object-fit: contain;
+}
+
+.my_browse {
+    padding: 50px 0;
+    grid-column: 2/8;
+    /*background: rgba(0, 200, 100 ,0.25);*/
+}
+
+.my_browse h1 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.browse_BUTTONS {
+    display: flex;
+    gap: 20px;
+}
+
+.browse_BUTTONS button {
+    flex: 1;
+    border-radius: 10px;
+    border: none;
+    overflow: hidden;
+    height: 140px;
+    padding: 0;
+    position: relative;
+}
+
+.browse_BUTTONS span {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.browse_BUTTONS img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.my_financing {
+    align-items: center;
+    grid-column: 2/8;
+    border: 1px solid var(--my-light-grey);
+    border-radius: 10px;
+    padding: 12px;
+    margin: 50px 0;
+    display: flex;
+    /*background: rgba(0, 200, 100 ,0.25);*/
+}
+
+.financing_IMG {
+    flex: 1;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+    background: var(--my-light-grey);
+    border-radius: 10px;
+    display: flex;
+}
+.financing_IMG img {
+    border-radius: 10px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.financing_TEXT {
+    flex: 1;
+    padding: 15px;
+}
+
+.financing_TEXT h1 {
+    font-size: 28px;
+}
+
+.financing_TEXT h1 span {
+    color: var(--my-orange);
+}
+
+.financing_TEXT p {
+    font-size: 14px;
+}
+
+.my_footer {
+    grid-column: 1/-1;
+    background: var(--my-banner-grey);
+    /*background: rgba(255, 255, 0 ,0.25);*/
+}
+
+.footer_TOP {
+    width: 1050px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.footer_LINKS {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.footer_LINKS a {
+    color: var(--my-grey);
+    font-size: 12px;
+}
+
+.footer_CONTACT h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.footer_CONTACT h2 {
+    margin:0;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+.footer_CONTACT p {
+    font-size:12px;
+}
+
+.footer_LINKS h1, .footer_SOCIAL h1 {
+    font-size: 16px;
+}
+
+.footer_BOTTOM {
+    text-align: center;
+    font-size: 12px;
+}
+
+.logo img {
+    display: block;
+    width: 90px;
+    height: auto;
+}
+
+.my_sign_in img{
+    display: block;
+    width: 50px;
+    height: auto;
+}
